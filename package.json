@@ -42,7 +42,7 @@
     "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
-    "tv-button": "^1.0.7",
-    "tv-icon": "^1.0.1"
+    "tv-button": "git+https://github.com/davmixcool/tv-button.git",
+    "tv-icon": "git+https://github.com/davmixcool/tv-icon.git"
   }
 }
