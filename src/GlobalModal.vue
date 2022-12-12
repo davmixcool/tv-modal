@@ -19,7 +19,7 @@
       </div>
     </div>
     <div v-if="primary" class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
-      <button
+      <push-button
         v-if="primary"
         ref="primary"
         class="flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto"
@@ -27,15 +27,15 @@
         @click.native="action('primary')"
       >
         {{ primary.label }}
-      </button>
-      <button
+      </push-button>
+      <push-button
         v-if="secondary"
         class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto"
         :theme="secondary.theme"
         @click.native="action('secondary')"
       >
         {{ secondary.label }}
-      </button>
+      </push-button>
     </div>
   </ModalBase>
 </template>
@@ -43,10 +43,10 @@
 <script>
 import { removeElement } from './utils.js'
 import ModalBase from './ModalBase.vue'
-//import { PushButton } from 'tv-button'
+import { PushButton } from 'tv-button'
 import { IconCheck, IconInfo, IconBang } from 'tv-icon'
 export default {
-  components: { ModalBase, IconCheck, IconInfo, IconBang },
+  components: { ModalBase, PushButton, IconCheck, IconInfo, IconBang },
   props: {
     type: {
       type: String,
